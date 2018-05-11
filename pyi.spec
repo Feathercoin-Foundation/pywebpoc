@@ -1,13 +1,13 @@
 import platform
 import os
 
-binaries = [("./nwjs-v0.30.1-win-ia32.zip", ".")]
+binaries = [("./nwjs-v0.30.3-win-ia32.zip", ".")]
 name = os.path.join('build\\', "pywebpoc.exe")
 if platform.system() == "Darwin":
-    binaries = [("./nwjs-v0.30.1-osx-x64.zip", ".")]
+    datas = [("./nwjs-v0.30.3-osx-x64.zip", ".")]
     name = "pywebpoc"
 a = Analysis(['./main.py'],
-             binaries=binaries)
+             datas=datas)
 
 
 exe = EXE(
