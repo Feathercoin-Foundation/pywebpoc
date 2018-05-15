@@ -27,7 +27,7 @@ async def handle(request):
 """.format(datetime.today().isoformat()), content_type="text/html")
 
 app = web.Application()
-app.add_routes([web.get('/', handle)])
+app.router.add_get('/', handle)
 
 launch('http://localhost:9999', 'nw-app or firefox-app')
 web.run_app(app, port=9999)
