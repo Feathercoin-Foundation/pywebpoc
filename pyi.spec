@@ -1,10 +1,10 @@
 import platform
 import os
 
-binaries = [("./nwjs-v0.30.3-win-ia32.zip", ".")]
+binaries = [("./nwjs-v0.30.4-win-ia32.zip", ".")]
 name = os.path.join('build\\', "pywebpoc.exe")
 if platform.system() == "Darwin":
-    datas = [("./nwjs-v0.30.3-osx-x64.zip", ".")]
+    datas = [("./nwjs-v0.30.4-osx-x64.zip", ".")]
     name = "pywebpoc"
 a = Analysis(['./main.py'],
              datas=datas)
